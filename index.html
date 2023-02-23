@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>DR3 Experience</title>
+
+    <link href="https://www.1001freefonts.com/es/begok-v15.font" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=648X000t_HhfEOeEtOAE0A8Qh3YmOLecG6iNo8QSasoKetQPCERGn_dWJZnjMM3KmVIA3XzfBIO79BR6RDqnwSfSfnP3U9oMJLApf_xpUc9fEm61BAzlMs5RVy0ocQEbDLxV3Vk6oSjNb8rXuVnefw" charset="UTF-8"></script></head>
+
+  <body>
+
+      <header>
+
+        <img width="80" height="80" src="../dr3.ico" title="img logo"align="left"></img>
+      </header>
+
+      <section>
+
+      </section>
+
+    <script>
+
+    async function populate() {
+
+      const requestURL = '../file.json';
+      const request = new Request(requestURL);
+
+      const response = await fetch(request);
+      const superHeroesText = await response.text();
+
+      const superHeroes = JSON.parse(superHeroesText);
+      populateHeader(superHeroes);
+      populateHeroes(superHeroes);
+
+    }
+
+    function populateHeader(obj) {
+      const header = document.querySelector('header');
+      const myH1 = document.createElement('h1');
+      myH1.textContent = obj.squadName;
+      header.appendChild(myH1);
+
+      const myPara = document.createElement('p');
+      myPara.textContent = ` La mejor ${obj.homeTown}  ${obj.formed}`;
+      header.appendChild(myPara);
+    }
+
+    function populateHeroes(obj) {
+      const section = document.querySelector('section');
+      const heroes = obj.members;
+
+      for (const hero of heroes) {
+        const myArticle = document.createElement('article');
+        const myH2 = document.createElement('h2');
+        const myPara1 = document.createElement('p');
+        const myPara2 = document.createElement('p');
+        const myPara3 = document.createElement('p');
+        const myList = document.createElement('ul');
+
+        myH2.textContent = hero.name;
+        myPara1.textContent = `Articulo: ${hero.secretIdentity}`;
+        myPara2.textContent = `Modelo: ${hero.age}`;
+        myPara3.textContent = 'Caracteristicas:';
+
+        const superPowers = hero.powers;
+        for (const power of superPowers) {
+          const listItem = document.createElement('li');
+          listItem.textContent = power;
+          myList.appendChild(listItem);
+        }
+
+        myArticle.appendChild(myH2);
+        myArticle.appendChild(myPara1);
+        myArticle.appendChild(myPara2);
+        myArticle.appendChild(myPara3);
+        myArticle.appendChild(myList);
+
+        section.appendChild(myArticle);
+      }
+    }
+
+    populate();
+    GamepadButton
+
+    </script>
+    <iframe width="345" height="220" src="https://www.youtube.com/embed/xAr-syz8DBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen align="right"></iframe>
+      <iframe width="345" height="220" src="https://www.youtube.com/embed/86Yaw6mfiY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen align="right"></iframe>
+      <iframe width="345" height="220" src="https://www.youtube.com/embed/NRVJYL2oyqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen align="right"></iframe>
+  
+  </body>
+</html>

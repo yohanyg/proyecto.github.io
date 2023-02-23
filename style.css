@@ -1,0 +1,70 @@
+html {
+    font-family:  'Arial Black', cursive;
+    
+  
+  }
+  
+  
+  body {
+    width: 1150px;
+    margin: auto;
+    background-image: url('../fon1.jpg');
+  }
+  
+  h1, h2 {
+    font-family: 'Begok v15', cursive;
+    color: whitesmoke;
+  }
+  
+  /* header styles */
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+   
+  }
+  header img{
+    border-radius: 30%;
+  
+  }
+  /* section styles */
+  
+  section article {
+    width: 30%;
+    float: right;
+    text-align: center;
+    margin-top: 5px;
+    border-top-style: ridge;
+    background-color: rgb(63, 145, 199);
+    backface-visibility: hidden;
+  
+  }
+  
+  section p {
+    margin-top: 10px;
+    text-align: center;
+
+    
+  }
+  
+  section ul {
+    margin: 10px 0;
+    text-align: center;
+    list-style: none;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+  }
+
+
+  

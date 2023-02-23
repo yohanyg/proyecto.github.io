@@ -1,0 +1,39 @@
+{
+  "squadName": "DR3 Experience",
+  "homeTown": "Tecnologia a Tu Alcance",
+  "formed": 3,
+  "secretBase": "Technology",
+  "active": true,
+  "members": [
+    {
+      "name": "Laptop",
+      "age": 15,
+      "secretIdentity": "Lenovo",
+      "powers": [
+        "SDD 1TB",
+        "RAM 16GB",
+        "GPU 4 GB DDR4"
+      ]
+    },
+    {
+      "name": "Impresora",
+      "age": 611,
+      "secretIdentity": "Lexmark",
+      "powers": [
+        "Multifuncional",
+        "Memoria 4GB",
+        "Firmware 3.0"
+      ]
+    },
+    {
+      "name": "Proyector",
+      "age": 3000,
+      "secretIdentity": "Casio",
+      "powers": [
+        "3000 Lumens",
+        "Wi-fi Conexion",
+        "1 Puerto HDMI"
+      ]
+    }
+  ]
+}
